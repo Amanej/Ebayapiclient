@@ -267,10 +267,68 @@ var _getCategories = function() {
   });
 };
 
+var _GeteBayDetails = function() {
+  var params = {
+    DetailName: "ShippingServiceDetails"
+  };
+
+  ebay.xmlRequest({
+      serviceName: "Trading",
+      opType: "GeteBayDetails",
+
+      // Authentication
+      devId: _devId,
+      certId: _certId,
+      appName: apiId,
+      sandbox: true,
+
+      authToken: authToken,
+
+      params: params
+      //parser: ebay.parseResponseJson,
+
+  }, function durationCb(err,res) {
+    if(err) {
+      //console.log("We got errors");
+      console.log(err);
+    } else {
+      //console.log(res);
+      //console.log(res);
+      var _res = res;
+      console.dir(_res);
+      // ListingDurations
+
+      var stringified = JSON.stringify(_res,null,4);
+      console.log(stringified);
+      // Write fs
+      /*fs.writeFile("testFeatures.txt",stringified, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });*/
+
+      //console.log(_res.CategoryName);
+      //console.log(_res.CategoryID);
+
+      //console.log(_res.Categorys);
+      /*for(var key in _res) {
+        if(_res.hasOwnProperty(key)) {
+          //console.dir(key);
+          //console.log("->");
+          console.dir(_res[key]);
+        }
+      }*/
+    }
+  });
+};
 
 //_getCategories();
 
 //_getCategoryDuration("162951");
+
+_GeteBayDetails();
 
 var _createListing = function() {
   var data = {
@@ -283,20 +341,30 @@ var _createListing = function() {
     "Description": "<h1>This is an awesome pokemon product</h1>Buy it now.",
     "PaymentMethods": "Paypal",
     "PaymentMethods": "CreditCard",
+    "PayPalEmailAddress": "aman.mender@gmail.com",
     //"PrimaryCategory": "164808",
     "PrimaryCategory.CategoryID": data.categoryId,
     "StartPrice": data.price,
     "Site": "US",
-    "ListingDuration": "Days_31",
+    "ListingDuration": "Days_30",
+    "ListingType": "FixedPriceItem",
     "Location": "Oslo, Norway",
     "Country": "NO",
-    "Currency": "USD"
+    "Currency": "USD",
+    "InternationalShippingServiceOptionsType": {
+      "ImportCharge": "",
+      "ShippinginsuranceCost": "",
+      "ShippingService": "",
+      "ShippingServiceCost": "",
+      "ShippingServicePriority": "",
+      "ShipToLocation": ""
+    }
   };
   var params = {
     Item: Item
   };
   console.log("ListingDuration: "+Item.ListingDuration);
-  console.log("Categoryid: "+data.categoryId)
+  console.log("Categoryid: "+data.categoryId);
 
   ebay.xmlRequest({
       serviceName: "Trading",
@@ -338,5 +406,4 @@ var _createListing = function() {
   });
 };
 
-
-_createListing();
+//_createListing();
