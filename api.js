@@ -45,7 +45,70 @@ var _getProducts = function() {
    });
 };
 
-var authToken = "AgAAAA**AQAAAA**aAAAAA**gr6rVw**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4GjCpeEqAmdj6x9nY+seQ**QegDAA**AAMAAA**29BwxipzitZxdgqHTDGSjco1rxKhb75Lj8LUwMJsLcMnrpP2egY9Mf41mALPY+Dow1PWrsJVZa8M6ImqnZP6S+bbjC5la5DmDKaagL6jmp8zDsyDoMHIdG3PFgTl35vBXCp1wOHN6B6GP9361f9FEHlx2M+P9tUh0kZ6n4KnC1RWeYsmfifKtClCZkZlk5ooxqp3tO5fftMx6Vk6+uDwqYnkND96LnAIRiw9SxnXliRpNnyPuSdEQyPypCFwI0kanwnA+MLQRzJiRaUtCikiuJRJuAhaOPEVCN+5ydtIPLJ3GbUGsS7P0L1KFI0z/qXCBaKdTKQ/SBFRb7XWGeIblarH9SpLHqcbFnqyXWYmDsxPm47j67bEh53bGuFZJ4LQjU/WSB+bcR2jEeEtP8ukEqbjOyoz7yyWATsPC/gA9cUzIq0X/bNVP3eGbNJZ8WwOag6tzhgPWljSeGzi7kTqqAvudDhXpKJcs0SFcepRtHu/aEkR4wiO7F5ow98bEz79DMZYB1JtmOuV6o9CILYYaEDRPZ5DgBbiifm9+3Y9Vl9j5tB5+TgvLMIVA29clVVLEA6M6q/gZXOaPuvfsdNtME6QnHobbYwKGGgKMQc80eUjuX+mI+3mWKfsygR1gCYxtdTjHdTcT4/87mBhvXhdLln4JqKd+DoDl6YGlD1zyPZfB6FLNj+gdlnfx1djB741ysQSBmy7l7JykJR49AUQ9/pgc75rIoLJlLry0JGzhbq7GPHo4NIdiLILMSXm256A";
+var authToken = settings.authToken;
+
+var _getCategoryDuration = function(catId) {
+  var params = {
+    CategoryID: catId,
+    DetailLevel: "ReturnAll",
+    ViewAllNodes: true,
+    AllFeaturesForCategory: true
+  };
+
+  ebay.xmlRequest({
+      serviceName: "Trading",
+      opType: "GetCategoryFeatures",
+
+      // Authentication
+      devId: _devId,
+      certId: _certId,
+      appName: apiId,
+      sandbox: true,
+
+      authToken: authToken,
+
+      params: params
+      //parser: ebay.parseResponseJson,
+
+  }, function durationCb(err,res) {
+    if(err) {
+      //console.log("We got errors");
+      //console.log(err);
+    } else {
+      //console.log(res);
+      //console.log(res);
+      var _res = res;
+      //console.dir(_res);
+      // ListingDurations
+
+      var stringified = JSON.stringify(_res,null,4);
+
+      // Write fs
+      fs.writeFile("testFeatures.txt",stringified, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });
+
+      //console.log(_res.CategoryName);
+      //console.log(_res.CategoryID);
+
+      //console.log(_res.Categorys);
+      /*for(var key in _res) {
+        if(_res.hasOwnProperty(key)) {
+          //console.dir(key);
+          //console.log("->");
+          console.dir(_res[key]);
+        }
+      }*/
+
+
+
+    }
+  });
+}
 
 var _getCategories = function() {
   var params = {
@@ -55,6 +118,99 @@ var _getCategories = function() {
   ebay.xmlRequest({
       serviceName: "Trading",
       opType: "GetCategories",
+
+      // Authentication
+      devId: _devId,
+      certId: _certId,
+      appName: apiId,
+      sandbox: true,
+
+      authToken: authToken,
+
+      params: params
+      //parser: ebay.parseResponseJson,
+
+  }, function categoryCb(err,res) {
+    if(err) {
+      //console.log("We got errors");
+      console.log(err);
+    } else {
+      //console.log(res);
+      //console.log(res);
+      var _res = res;
+      /*console.dir(_res);
+      var stringified = JSON.stringify(_res,null,4);
+
+      // Write fs
+      fs.writeFile("test.txt",stringified, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });*/
+
+      //console.log(_res.CategoryName);
+      //console.log(_res.CategoryID);
+
+      //console.log(_res.Categorys);
+      /*for(var key in _res) {
+        if(_res.hasOwnProperty(key)) {
+          //console.dir(key);
+          //console.log("->");
+          console.dir(_res[key]);
+        }
+      }*/
+
+      var _cats = _res.Categorys;
+
+      _cats.forEach(function (category,index) {
+        if(index < 150) {
+          console.log("Index: "+index);
+          console.log("Category name: "+category.CategoryName);
+          console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          console.log("Durations: "+category.ListingDurations);
+        }
+        //console.log(category.CategoryName);
+        //console.log(category.CategoryID);
+      });
+
+    }
+  });
+};
+
+
+//_getCategories();
+
+//_getCategoryDuration("162983");
+
+var _createListing = function() {
+  var data = {
+    categoryId: "162983",
+    price: "24.99"
+  }
+  var Item = {
+    "Title": "Pokemon Low Poly",
+    "Description": "<h1>This is an awesome pokemon product</h1>Buy it now.",
+    "PaymentMethods": "Paypal",
+    "PaymentMethods": "CreditCard",
+    "PrimaryCategory.CategoryID": data._categoryId,
+    "StartPrice": data.price,
+    "Site": "US",
+    "ListingDuration": "Days_31",
+    "Location": "Oslo, Norway",
+    "Country": "NO",
+    "Currency": "USD"
+  }
+  var params = {
+    Item: Item
+  };
+  console.log("ListingDuration: "+Item.ListingDuration);
+
+  ebay.xmlRequest({
+      serviceName: "Trading",
+      opType: "VerifyAddItem",
 
       // Authentication
       devId: _devId,
@@ -117,4 +273,4 @@ var _getCategories = function() {
 };
 
 
-_getCategories();
+_createListing();

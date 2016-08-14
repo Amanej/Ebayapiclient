@@ -1,0 +1,439 @@
+{
+    "$": {
+        "xmlns": "urn:ebay:apis:eBLBaseComponents"
+    },
+    "Timestamp": "2016-08-13T21:16:47.651Z",
+    "Ack": "Success",
+    "Version": "967",
+    "Build": "E967_CORE_API_18057175_R1",
+    "CategoryVersion": "8301",
+    "UpdateTime": "2016-08-13T09:41:56.000Z",
+    "Category": {
+        "CategoryID": "162983",
+        "ListingDuration": [
+            {
+                "_": "1",
+                "$": {
+                    "type": "Chinese"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "Dutch"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "Live"
+                }
+            },
+            {
+                "_": "2",
+                "$": {
+                    "type": "AdType"
+                }
+            },
+            {
+                "_": "31",
+                "$": {
+                    "type": "StoresFixedPrice"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "PersonalOffer"
+                }
+            },
+            {
+                "_": "31",
+                "$": {
+                    "type": "FixedPriceItem"
+                }
+            },
+            {
+                "_": "14",
+                "$": {
+                    "type": "LeadGeneration"
+                }
+            },
+            {
+                "_": "7",
+                "$": {
+                    "type": "Shopping"
+                }
+            }
+        ],
+        "BestOfferEnabled": "true",
+        "BestOfferCounterEnabled": "true",
+        "BestOfferAutoDeclineEnabled": "true",
+        "ExpressEnabled": "false",
+        "BestOfferAutoAcceptEnabled": "true",
+        "FreeGalleryPlusEnabled": "true",
+        "FreePicturePackEnabled": "true",
+        "ItemCompatibilityEnabled": "Disabled",
+        "MinItemCompatibility": "-1",
+        "MaxItemCompatibility": "-1",
+        "FixedPriceFormatDisabled": "false",
+        "MaxGranularFitmentCount": "-1",
+        "CompatibleVehicleType": "-1",
+        "GlobalShippingEnabled": "false",
+        "EpidSupported": "false",
+        "KTypeSupported": "false"
+    },
+    "SiteDefaults": {
+        "ListingDuration": [
+            {
+                "_": "1",
+                "$": {
+                    "type": "Chinese"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "Dutch"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "Live"
+                }
+            },
+            {
+                "_": "2",
+                "$": {
+                    "type": "AdType"
+                }
+            },
+            {
+                "_": "31",
+                "$": {
+                    "type": "StoresFixedPrice"
+                }
+            },
+            {
+                "_": "1",
+                "$": {
+                    "type": "PersonalOffer"
+                }
+            },
+            {
+                "_": "31",
+                "$": {
+                    "type": "FixedPriceItem"
+                }
+            },
+            {
+                "_": "14",
+                "$": {
+                    "type": "LeadGeneration"
+                }
+            }
+        ],
+        "ShippingTermsRequired": "true",
+        "BestOfferEnabled": "false",
+        "DutchBINEnabled": "false",
+        "UserConsentRequired": "false",
+        "HomePageFeaturedEnabled": "true",
+        "ProPackEnabled": "false",
+        "BasicUpgradePackEnabled": "false",
+        "ValuePackEnabled": "true",
+        "ProPackPlusEnabled": "true",
+        "AdFormatEnabled": "Disabled",
+        "BestOfferCounterEnabled": "false",
+        "BestOfferAutoDeclineEnabled": "false",
+        "LocalMarketSpecialitySubscription": "false",
+        "LocalMarketRegularSubscription": "false",
+        "LocalMarketPremiumSubscription": "false",
+        "LocalMarketNonSubscription": "false",
+        "ExpressEnabled": "true",
+        "ExpressPicturesRequired": "true",
+        "ExpressConditionRequired": "false",
+        "MinimumReservePrice": "0.0",
+        "SellerContactDetailsEnabled": "false",
+        "TransactionConfirmationRequestEnabled": "false",
+        "StoreInventoryEnabled": "false",
+        "SkypeMeTransactionalEnabled": "true",
+        "SkypeMeNonTransactionalEnabled": "true",
+        "ClassifiedAdPaymentMethodEnabled": "NotSupported",
+        "ClassifiedAdShippingMethodEnabled": "false",
+        "ClassifiedAdBestOfferEnabled": "Disabled",
+        "ClassifiedAdCounterOfferEnabled": "false",
+        "ClassifiedAdAutoDeclineEnabled": "false",
+        "ClassifiedAdContactByPhoneEnabled": "false",
+        "ClassifiedAdContactByEmailEnabled": "false",
+        "SafePaymentRequired": "true",
+        "ItemSpecificsEnabled": "Enabled",
+        "ClassifiedAdAutoAcceptEnabled": "false",
+        "BestOfferAutoAcceptEnabled": "false",
+        "CrossBorderTradeNorthAmericaEnabled": "false",
+        "CrossBorderTradeGBEnabled": "true",
+        "CrossBorderTradeAustraliaEnabled": "false",
+        "PayPalBuyerProtectionEnabled": "false",
+        "BuyerGuaranteeEnabled": "true",
+        "CombinedFixedPriceTreatmentEnabled": "true",
+        "GalleryFeaturedDurations": {
+            "Duration": [
+                "Days_7",
+                "Lifetime"
+            ]
+        },
+        "PayPalRequired": "false",
+        "eBayMotorsProAdFormatEnabled": "Disabled",
+        "eBayMotorsProContactByPhoneEnabled": "false",
+        "eBayMotorsProContactByAddressEnabled": "false",
+        "eBayMotorsProCompanyNameEnabled": "false",
+        "eBayMotorsProContactByEmailEnabled": "false",
+        "eBayMotorsProBestOfferEnabled": "Disabled",
+        "eBayMotorsProAutoAcceptEnabled": "false",
+        "eBayMotorsProAutoDeclineEnabled": "false",
+        "eBayMotorsProPaymentMethodCheckOutEnabled": "NotSupported",
+        "eBayMotorsProShippingMethodEnabled": "false",
+        "eBayMotorsProCounterOfferEnabled": "false",
+        "eBayMotorsProSellerContactDetailsEnabled": "false",
+        "LocalMarketAdFormatEnabled": "Disabled",
+        "LocalMarketContactByPhoneEnabled": "false",
+        "LocalMarketContactByAddressEnabled": "false",
+        "LocalMarketCompanyNameEnabled": "false",
+        "LocalMarketContactByEmailEnabled": "false",
+        "LocalMarketBestOfferEnabled": "Disabled",
+        "LocalMarketAutoAcceptEnabled": "false",
+        "LocalMarketAutoDeclineEnabled": "false",
+        "LocalMarketPaymentMethodCheckOutEnabled": "NotSupported",
+        "LocalMarketShippingMethodEnabled": "false",
+        "LocalMarketCounterOfferEnabled": "false",
+        "LocalMarketSellerContactDetailsEnabled": "false",
+        "ClassifiedAdContactByAddressEnabled": "false",
+        "ClassifiedAdCompanyNameEnabled": "false",
+        "SpecialitySubscription": "National",
+        "RegularSubscription": "National",
+        "PremiumSubscription": "National",
+        "NonSubscription": "National",
+        "IntangibleEnabled": "false",
+        "PayPalRequiredForStoreOwner": "false",
+        "ReviseQuantityAllowed": "true",
+        "RevisePriceAllowed": "true",
+        "StoreOwnerExtendedListingDurationsEnabled": "false",
+        "ReturnPolicyEnabled": "true",
+        "HandlingTimeEnabled": "false",
+        "MaxFlatShippingCostCBTExempt": "false",
+        "PaymentMethod": [
+            "PayPal",
+            "VisaMC",
+            "Discover",
+            "AmEx",
+            "IntegratedMerchantCreditCard",
+            "CashOnPickup"
+        ],
+        "ZeroInsertionFeeEligible": "false",
+        "VariationsEnabled": "false",
+        "AttributeConversionEnabled": "Disabled",
+        "FreeGalleryPlusEnabled": "false",
+        "FreePicturePackEnabled": "false",
+        "ItemCompatibilityEnabled": "Disabled",
+        "MinItemCompatibility": "0",
+        "MaxItemCompatibility": "0",
+        "ConditionEnabled": "Disabled",
+        "ValueCategory": "false",
+        "ProductCreationEnabled": "Disabled",
+        "FixedPriceFormatDisabled": "false",
+        "MaxItemSpecificsInClassified": "0",
+        "MaxGranularFitmentCount": "0",
+        "ShippingProfileCategoryGroup": "ALL",
+        "PaymentProfileCategoryGroup": "ALL",
+        "ReturnPolicyProfileCategoryGroup": "ALL",
+        "VINSupported": "false",
+        "VRMSupported": "false",
+        "SellerProvidedTitleSupported": "false",
+        "DepositSupported": "false",
+        "GlobalShippingEnabled": "true",
+        "AdditionalCompatibilityEnabled": "false",
+        "PickupDropOffEnabled": "false",
+        "DigitalGoodDeliveryEnabled": "false"
+    },
+    "FeatureDefinitions": {
+        "ListingDurations": {
+            "$": {
+                "Version": "7"
+            },
+            "ListingDuration": [
+                {
+                    "$": {
+                        "durationSetID": "1"
+                    },
+                    "Duration": [
+                        "Days_3",
+                        "Days_5",
+                        "Days_7",
+                        "Days_10"
+                    ]
+                },
+                {
+                    "$": {
+                        "durationSetID": "2"
+                    },
+                    "Duration": [
+                        "Days_30",
+                        "Days_90"
+                    ]
+                },
+                {
+                    "$": {
+                        "durationSetID": "7"
+                    },
+                    "Duration": [
+                        "Days_30",
+                        "GTC"
+                    ]
+                },
+                {
+                    "$": {
+                        "durationSetID": "14"
+                    },
+                    "Duration": [
+                        "Days_30",
+                        "Days_60",
+                        "Days_90"
+                    ]
+                },
+                {
+                    "$": {
+                        "durationSetID": "31"
+                    },
+                    "Duration": [
+                        "Days_3",
+                        "Days_5",
+                        "Days_7",
+                        "Days_10",
+                        "Days_30",
+                        "GTC"
+                    ]
+                }
+            ]
+        },
+        "ShippingTermsRequired": "",
+        "BestOfferEnabled": "",
+        "DutchBINEnabled": "",
+        "UserConsentRequired": "",
+        "HomePageFeaturedEnabled": "",
+        "ProPackEnabled": "",
+        "BasicUpgradePackEnabled": "",
+        "ValuePackEnabled": "",
+        "ProPackPlusEnabled": "",
+        "AdFormatEnabled": "",
+        "BestOfferCounterEnabled": "",
+        "BestOfferAutoDeclineEnabled": "",
+        "LocalMarketSpecialitySubscription": "",
+        "LocalMarketRegularSubscription": "",
+        "LocalMarketPremiumSubscription": "",
+        "LocalMarketNonSubscription": "",
+        "ExpressEnabled": "",
+        "ExpressPicturesRequired": "",
+        "ExpressConditionRequired": "",
+        "MinimumReservePrice": "",
+        "TransactionConfirmationRequestEnabled": "",
+        "SellerContactDetailsEnabled": "",
+        "StoreInventoryEnabled": "",
+        "SkypeMeTransactionalEnabled": "",
+        "SkypeMeNonTransactionalEnabled": "",
+        "ClassifiedAdPaymentMethodEnabled": "",
+        "ClassifiedAdShippingMethodEnabled": "",
+        "ClassifiedAdBestOfferEnabled": "",
+        "ClassifiedAdCounterOfferEnabled": "",
+        "ClassifiedAdAutoDeclineEnabled": "",
+        "ClassifiedAdContactByPhoneEnabled": "",
+        "ClassifiedAdContactByEmailEnabled": "",
+        "SafePaymentRequired": "",
+        "ItemSpecificsEnabled": "",
+        "BestOfferAutoAcceptEnabled": "",
+        "ClassifiedAdAutoAcceptEnabled": "",
+        "CrossBorderTradeNorthAmericaEnabled": "",
+        "CrossBorderTradeGBEnabled": "",
+        "CrossBorderTradeAustraliaEnabled": "",
+        "PayPalBuyerProtectionEnabled": "",
+        "BuyerGuaranteeEnabled": "",
+        "CombinedFixedPriceTreatmentEnabled": "",
+        "GalleryFeaturedDurations": "",
+        "PayPalRequired": "",
+        "eBayMotorsProAdFormatEnabled": "",
+        "eBayMotorsProContactByPhoneEnabled": "",
+        "eBayMotorsProPhoneCount": "",
+        "eBayMotorsProContactByAddressEnabled": "",
+        "eBayMotorsProStreetCount": "",
+        "eBayMotorsProCompanyNameEnabled": "",
+        "eBayMotorsProContactByEmailEnabled": "",
+        "eBayMotorsProBestOfferEnabled": "",
+        "eBayMotorsProAutoAcceptEnabled": "",
+        "eBayMotorsProAutoDeclineEnabled": "",
+        "eBayMotorsProPaymentMethodCheckOutEnabled": "",
+        "eBayMotorsProShippingMethodEnabled": "",
+        "eBayMotorsProCounterOfferEnabled": "",
+        "eBayMotorsProSellerContactDetailsEnabled": "",
+        "LocalMarketAdFormatEnabled": "",
+        "LocalMarketContactByPhoneEnabled": "",
+        "LocalMarketPhoneCount": "",
+        "LocalMarketContactByAddressEnabled": "",
+        "LocalMarketStreetCount": "",
+        "LocalMarketCompanyNameEnabled": "",
+        "LocalMarketContactByEmailEnabled": "",
+        "LocalMarketBestOfferEnabled": "",
+        "LocalMarketAutoAcceptEnabled": "",
+        "LocalMarketAutoDeclineEnabled": "",
+        "LocalMarketPaymentMethodCheckOutEnabled": "",
+        "LocalMarketShippingMethodEnabled": "",
+        "LocalMarketCounterOfferEnabled": "",
+        "LocalMarketSellerContactDetailsEnabled": "",
+        "ClassifiedAdPhoneCount": "",
+        "ClassifiedAdContactByAddressEnabled": "",
+        "ClassifiedAdStreetCount": "",
+        "ClassifiedAdCompanyNameEnabled": "",
+        "SpecialitySubscription": "",
+        "RegularSubscription": "",
+        "PremiumSubscription": "",
+        "NonSubscription": "",
+        "IntangibleEnabled": "",
+        "ReturnPolicyEnabled": "",
+        "HandlingTimeEnabled": "",
+        "PayPalRequiredForStoreOwner": "",
+        "ReviseQuantityAllowed": "",
+        "RevisePriceAllowed": "",
+        "StoreOwnerExtendedListingDurationsEnabled": "",
+        "PaymentMethod": "",
+        "Group1MaxFlatShippingCost": "",
+        "Group2MaxFlatShippingCost": "",
+        "Group3MaxFlatShippingCost": "",
+        "MaxFlatShippingCostCBTExempt": "",
+        "MaxFlatShippingCost": "",
+        "ZeroInsertionFeeEligible": "",
+        "VariationsEnabled": "",
+        "AttributeConversionEnabled": "",
+        "FreeGalleryPlusEnabled": "",
+        "FreePicturePackEnabled": "",
+        "ItemCompatibilityEnabled": "",
+        "MaxItemCompatibility": "",
+        "MinItemCompatibility": "",
+        "ConditionEnabled": "",
+        "ConditionValues": "",
+        "ValueCategory": "",
+        "ProductCreationEnabled": "",
+        "FixedPriceFormatDisabled": "",
+        "MaxItemSpecificsInClassified": "",
+        "CompatibleVehicleType": "",
+        "MaxGranularFitmentCount": "",
+        "ShippingProfileCategoryGroup": "",
+        "PaymentProfileCategoryGroup": "",
+        "ReturnPolicyProfileCategoryGroup": "",
+        "VINSupported": "",
+        "VRMSupported": "",
+        "SellerProvidedTitleSupported": "",
+        "DepositSupported": "",
+        "GlobalShippingEnabled": "",
+        "AdditionalCompatibilityEnabled": "",
+        "PickupDropOffEnabled": "",
+        "DigitalGoodDeliveryEnabled": ""
+    }
+}
