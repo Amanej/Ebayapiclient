@@ -108,7 +108,7 @@ var _getCategoryDuration = function(catId) {
 
     }
   });
-}
+};
 
 var _getCategories = function() {
   var params = {
@@ -138,11 +138,11 @@ var _getCategories = function() {
       //console.log(res);
       //console.log(res);
       var _res = res;
-      /*console.dir(_res);
+      /*console.dir(_res);*/
       var stringified = JSON.stringify(_res,null,4);
 
       // Write fs
-      fs.writeFile("test.txt",stringified, function(error) {
+      /*fs.writeFile("categories.txt",stringified, function(error) {
         if(error) {
           console.log(error);
         }
@@ -163,18 +163,105 @@ var _getCategories = function() {
       }*/
 
       var _cats = _res.Categorys;
+      var _catsLevel1 = [];
+      var _catsLevel2 = [];
+      var _catsLevel3 = [];
+      var _catsLevel4 = [];
+      var _catsLevel5 = [];
 
       _cats.forEach(function (category,index) {
-        if(index < 150) {
+        if(index < 200) {
+          //console.log("Index: "+index);
+          //console.log("Category name: "+category.CategoryName);
+          //console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          //console.log("Durations: "+category.ListingDurations);
+        }
+        if(category.CategoryLevel === "1") {
+          console.log("This is a level 1 category");
           console.log("Index: "+index);
           console.log("Category name: "+category.CategoryName);
           console.log("Category id: "+category.CategoryID);
           console.log("Category level: "+category.CategoryLevel);
           console.log("Durations: "+category.ListingDurations);
+          _catsLevel1.push(category.CategoryID);
+        } else if(category.CategoryLevel === "2") {
+          console.log("This is a level 2 category");
+          console.log("Index: "+index);
+          console.log("Category name: "+category.CategoryName);
+          console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          console.log("Durations: "+category.ListingDurations);
+          _catsLevel2.push(category.CategoryID);
+        } else if(category.CategoryLevel === "3") {
+          console.log("This is a level 3 category");
+          console.log("Index: "+index);
+          console.log("Category name: "+category.CategoryName);
+          console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          console.log("Durations: "+category.ListingDurations);
+          _catsLevel3.push(category.CategoryID);
+        } else if(category.CategoryLevel === "4") {
+          console.log("This is a level 4 category");
+          console.log("Index: "+index);
+          console.log("Category name: "+category.CategoryName);
+          console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          console.log("Durations: "+category.ListingDurations);
+          _catsLevel4.push(category.CategoryID);
+        } else if(category.CategoryLevel === "5") {
+          console.log("This is a level 5 category");
+          console.log("Index: "+index);
+          console.log("Category name: "+category.CategoryName);
+          console.log("Category id: "+category.CategoryID);
+          console.log("Category level: "+category.CategoryLevel);
+          console.log("Durations: "+category.ListingDurations);
+          _catsLevel5.push(category.CategoryID);
         }
         //console.log(category.CategoryName);
         //console.log(category.CategoryID);
       });
+
+      console.log("Level 1 categories");
+      console.dir(_catsLevel1);
+
+      console.log("Level 2 categories");
+      console.dir(_catsLevel2);
+
+      console.log("Level 3 categories");
+      console.dir(_catsLevel3);
+
+      console.log("Level 4 categories");
+      console.dir(_catsLevel4);
+
+      console.log("Level 5 categories");
+      console.dir(_catsLevel5);
+
+      // Write files to seperate text files
+      fs.writeFile("categories_1.txt",_catsLevel1, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });
+
+      fs.writeFile("categories_4.txt",_catsLevel4, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });
+
+      fs.writeFile("categories_5.txt",_catsLevel5, function(error) {
+        if(error) {
+          console.log(error);
+        }
+
+        console.log("File was saved");
+      });
+
 
     }
   });
@@ -183,30 +270,33 @@ var _getCategories = function() {
 
 //_getCategories();
 
-//_getCategoryDuration("162983");
+//_getCategoryDuration("162951");
 
 var _createListing = function() {
   var data = {
-    categoryId: "162983",
+    //categoryId: "48749",
+    categoryId: "162951",
     price: "24.99"
-  }
+  };
   var Item = {
     "Title": "Pokemon Low Poly",
     "Description": "<h1>This is an awesome pokemon product</h1>Buy it now.",
     "PaymentMethods": "Paypal",
     "PaymentMethods": "CreditCard",
-    "PrimaryCategory.CategoryID": data._categoryId,
+    //"PrimaryCategory": "164808",
+    "PrimaryCategory.CategoryID": data.categoryId,
     "StartPrice": data.price,
     "Site": "US",
     "ListingDuration": "Days_31",
     "Location": "Oslo, Norway",
     "Country": "NO",
     "Currency": "USD"
-  }
+  };
   var params = {
     Item: Item
   };
   console.log("ListingDuration: "+Item.ListingDuration);
+  console.log("Categoryid: "+data.categoryId)
 
   ebay.xmlRequest({
       serviceName: "Trading",
@@ -220,8 +310,8 @@ var _createListing = function() {
 
       authToken: authToken,
 
-      params: params
-      //parser: ebay.parseResponseJson,
+      params: params,
+      parser: ebay.parseResponseJson,
 
   }, function categoryCb(err,res) {
     if(err) {
@@ -243,30 +333,6 @@ var _createListing = function() {
         console.log("File was saved");
       });*/
 
-      //console.log(_res.CategoryName);
-      //console.log(_res.CategoryID);
-
-      //console.log(_res.Categorys);
-      /*for(var key in _res) {
-        if(_res.hasOwnProperty(key)) {
-          //console.dir(key);
-          //console.log("->");
-          console.dir(_res[key]);
-        }
-      }*/
-
-      var _cats = _res.Categorys;
-
-      _cats.forEach(function (category,index) {
-        if(index < 20) {
-          console.log("Index: "+index);
-          console.log("Category name: "+category.CategoryName);
-          console.log("Category id: "+category.CategoryID);
-          console.log("Category level: "+category.CategoryLevel);
-        }
-        //console.log(category.CategoryName);
-        //console.log(category.CategoryID);
-      });
 
     }
   });

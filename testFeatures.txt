@@ -2,14 +2,14 @@
     "$": {
         "xmlns": "urn:ebay:apis:eBLBaseComponents"
     },
-    "Timestamp": "2016-08-13T21:16:47.651Z",
+    "Timestamp": "2016-08-14T13:50:54.222Z",
     "Ack": "Success",
     "Version": "967",
     "Build": "E967_CORE_API_18057175_R1",
     "CategoryVersion": "8301",
-    "UpdateTime": "2016-08-13T09:41:56.000Z",
+    "UpdateTime": "2016-08-14T09:41:46.000Z",
     "Category": {
-        "CategoryID": "162983",
+        "CategoryID": "162951",
         "ListingDuration": [
             {
                 "_": "1",
