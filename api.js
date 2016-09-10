@@ -328,12 +328,13 @@ var _GeteBayDetails = function() {
 
 //_getCategoryDuration("162951");
 
-_GeteBayDetails();
+//_GeteBayDetails();
 
 var _createListing = function() {
   var data = {
     //categoryId: "48749",
-    categoryId: "162951",
+    //categoryId: "162951",
+    categoryId: "106368",
     price: "24.99"
   };
   var Item = {
@@ -341,7 +342,7 @@ var _createListing = function() {
     "Description": "<h1>This is an awesome pokemon product</h1>Buy it now.",
     "PaymentMethods": "Paypal",
     "PaymentMethods": "CreditCard",
-    "PayPalEmailAddress": "aman.mender@gmail.com",
+    "PayPalEmailAddress": "kontakt@tegningtil3d.no",
     //"PrimaryCategory": "164808",
     "PrimaryCategory.CategoryID": data.categoryId,
     "StartPrice": data.price,
@@ -406,4 +407,4 @@ var _createListing = function() {
   });
 };
 
-//_createListing();
+_createListing();
